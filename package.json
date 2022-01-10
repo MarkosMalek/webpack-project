@@ -1,10 +1,12 @@
 {
-  "name": "webpack-project",
+  "name": "webpack-two",
   "version": "1.0.0",
   "description": "webpack-project",
   "main": "index.js",
   "scripts": {
-    "start": "cd src && cd server && node index.js"
+    "start": "cd src && cd server && node index.js",
+    "build-dev": "webpack --config webpack.dev.js",
+    "build-prod": "webpack --config webpack.prod.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +19,8 @@
   },
   "homepage": "https://github.com/MarkosMalek/webpack-project#readme",
   "dependencies": {
-    "express": "^4.17.2"
+    "express": "^4.17.2",
+    "webpack": "^5.65.0",
+    "webpack-cli": "^4.9.1"
   }
 }
