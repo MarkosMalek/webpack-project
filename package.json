@@ -1,0 +1,22 @@
+{
+  "name": "webpack-project",
+  "version": "1.0.0",
+  "description": "webpack-project",
+  "main": "index.js",
+  "scripts": {
+    "start": "cd src && cd server && node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarkosMalek/webpack-project.git"
+  },
+  "author": "MarkosMalek",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MarkosMalek/webpack-project/issues"
+  },
+  "homepage": "https://github.com/MarkosMalek/webpack-project#readme",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}
