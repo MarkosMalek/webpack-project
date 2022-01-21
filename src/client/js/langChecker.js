@@ -17,8 +17,11 @@ export function checkForLang(inputText, apikey) {
       body.then((result) => {
         document.getElementById("results").innerHTML =
           result.language_list[0].name;
+
+        const unixTime = Math.round(Date.now() / 1000).toString();
+        const date = new Date(unixTime * 1000);
+        document.getElementById("date").innerHTML = date;
       })
     )
-
     .catch((error) => console.log("error", error));
 }

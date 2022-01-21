@@ -6,39 +6,51 @@
   </head>
 
   <body>
-    <header>
-      <div class="">Logo</div>
-      <div class="">navigation</div>
-    </header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <div class="">Home</div>
+        <div class="">navigation</div>
+      </div>
+    </nav>
 
     <main>
+      <h1>Language Checker</h1>
       <section>
-        <form class="" onsubmit="return Client.handleSubmit(event)">
-          <input
-            id="name"
-            type="text"
-            name="input"
-            value=""
-            placeholder="Text"
-          />
-          <input
-            type="submit"
-            name=""
-            value="submit"
-            onclick="return Client.handleSubmit(event)"
-            onsubmit="return handleSubmit(event)"
-          />
+        <form class="mb-3" onsubmit="return Client.handleSubmit(event)">
+          <div>
+            <textarea
+              rows="3"
+              class="form-control"
+              id="name"
+              type="text"
+              name="input"
+              value=""
+              placeholder="Text"
+            ></textarea>
+          </div>
+          <div class="mb-3 contaner">
+            <input
+              class="btn btn-primary button"
+              type="submit"
+              name=""
+              value="check"
+              onclick="return Client.handleSubmit(event)"
+              onsubmit="return handleSubmit(event)"
+            />
+          </div>
         </form>
       </section>
 
       <section>
         <strong>The language is:</strong>
-        <div id="results"></div>
+        <div id="results">Type Something First!</div>
+        <strong>Date:</strong>
+        <div id="date">--</div>
       </section>
     </main>
 
-    <footer>
-      <p>This is a footer</p>
+    <footer class="bg-dark text-white pt-2 pb-1">
+      <div class="container"><p>@Markos Malek 2022</p></div>
     </footer>
   </body>
 </html>

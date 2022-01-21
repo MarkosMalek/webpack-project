@@ -5,11 +5,7 @@ const app = express();
 require("dotenv").config();
 
 app.use(express.static("../../dist"));
-app.use(
-  cors({
-    origin: "http://localhost:8080",
-  })
-);
+app.use(cors());
 app.use(express.json());
 
 // designates what port the app will listen to for incoming requests
