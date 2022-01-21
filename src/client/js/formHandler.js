@@ -3,10 +3,16 @@ export function handleSubmit(event) {
 
   // check what text was put into the form field
   let formText = document.getElementById("name").value;
-  Client.checkForName(formText);
-  fetch("http://localhost:8082/test")
-    .then((res) => res.json())
-    .then(function (res) {
-      document.getElementById("results").innerHTML = res.message;
-    });
+
+  fetch("http://localhost:8082/apiKey")
+    .then((response) => ({
+      body: response.text(),
+    }))
+    .then(({ body }) =>
+      body.then((result) => {
+        Client.checkForLang(formText, result);
+      })
+    )
+
+    .catch((error) => console.log("error", error));
 }
