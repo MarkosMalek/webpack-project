@@ -6,7 +6,8 @@
     "test": "jest",
     "start": "cd src && cd server && node index.js",
     "build-dev": "webpack-dev-server --config webpack.dev.js --open",
-    "build-prod": "webpack --config webpack.prod.js"
+    "build-prod": "webpack --config webpack.prod.js",
+    "start-dev": "cd src && cd server && nodemon index.js"
   },
   "author": "MarkosMalek",
   "license": "ISC",
@@ -15,6 +16,8 @@
     "cors": "^2.8.5",
     "dotenv": "^14.2.0",
     "express": "^4.17.2",
+    "form-data": "^4.0.0",
+    "node-fetch": "^3.2.0",
     "sass": "^1.49.0",
     "webpack": "^5.66.0",
     "webpack-cli": "^4.9.1"
@@ -29,6 +32,7 @@
     "jest": "^27.4.7",
     "mini-css-extract-plugin": "^2.5.2",
     "node-sass": "^7.0.1",
+    "nodemon": "^2.0.15",
     "optimize-css-assets-webpack-plugin": "^6.0.1",
     "regenerator-runtime": "^0.13.9",
     "sass-loader": "^12.4.0",

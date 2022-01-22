@@ -1,23 +1,16 @@
-export function checkForLang(inputText, apikey) {
-  const formdata = new FormData();
-  formdata.append("key", apikey);
-  formdata.append("txt", inputText);
-
+export function checkForLang(inputText) {
   const requestOptions = {
     method: "POST",
-    body: formdata,
-    redirect: "follow",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify({ input: inputText }),
   };
 
-  fetch("https://api.meaningcloud.com/lang-4.0/identification", requestOptions)
-    .then((response) => ({
-      body: response.json(),
-    }))
+  fetch("http://localhost:8082/answer", requestOptions)
+    .then((response) => ({ body: response.text() }))
     .then(({ body }) =>
       body.then((result) => {
-        document.getElementById("results").innerHTML =
-          result.language_list[0].name;
-        if (result.language_list[0].name == "Undetermined") {
+        document.getElementById("results").innerHTML = result;
+        if (result == "Undetermined") {
           alert("not valid input");
         }
         const unixTime = Math.round(Date.now() / 1000).toString();
@@ -25,5 +18,10 @@ export function checkForLang(inputText, apikey) {
         document.getElementById("date").innerHTML = date;
       })
     )
+
     .catch((error) => console.log("error", error));
 }
+/*
+
+   
+*/
