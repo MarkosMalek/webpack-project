@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
+    "test": "jest",
     "start": "cd src && cd server && node index.js",
     "build-dev": "webpack-dev-server --config webpack.dev.js --open",
     "build-prod": "webpack --config webpack.prod.js"
@@ -25,9 +26,11 @@
     "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^6.5.1",
     "html-webpack-plugin": "^5.5.0",
+    "jest": "^27.4.7",
     "mini-css-extract-plugin": "^2.5.2",
     "node-sass": "^7.0.1",
     "optimize-css-assets-webpack-plugin": "^6.0.1",
+    "regenerator-runtime": "^0.13.9",
     "sass-loader": "^12.4.0",
     "style-loader": "^3.3.1",
     "terser-webpack-plugin": "^5.3.0",
