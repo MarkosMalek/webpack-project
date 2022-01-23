@@ -1,7 +1,6 @@
 const path = require("path");
 const webpack = require("webpack");
 const htmlWebpackPlugin = require("html-webpack-plugin");
-
 module.exports = {
   mode: "development",
   devtool: "source-map",
